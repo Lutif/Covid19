@@ -1,0 +1,56 @@
+body{
+    box-sizing: border-box;
+    background-color: #e5e5d1;
+}
+*{
+    margin: 0;
+}
+/* div{
+    border: 2px solid red;
+} */
+h2,h3{
+    margin-top: 5px;
+}
+.dashboard{
+    font-size: 1.4rem;
+    min-height: 100vh;
+    min-width: 100%;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-rows :100vh */
+}
+.dawn-blog{
+    display: flex;
+    flex-direction: column;
+    grid-column:1/2
+}
+.world-meter{
+
+    text-align: center;
+    padding: 10px;
+    grid-column:2/4
+}
+.stat{
+    border-radius: 5px;
+    box-shadow: cadetblue 5px 5px 10px;
+    text-align: center;
+    background-color: #e5e5e5;
+}
+
+.stat-group{
+    box-shadow: cadetblue 5px 5px 10px;
+    padding: 10px;
+    text-align: center;
+    color:black;
+}
+
+.green{
+    color: darkgreen;
+}
+
+.red{
+    color: red;
+}
+.blue{
+    color: midnightblue;
+}
