@@ -38,7 +38,7 @@ function MapMain() {
           url="https://{s}.tile.osm.org/{z}/{x}/{y}.png"
         />
         <ZoomControl position="topright" />
-        {data.map(country => ( 
+        {data.map(country => ( country[show]>=1 && 
           <Circle
             key={country["Coutry,State"]}
             center={ [country.Lat, country.Long]}
