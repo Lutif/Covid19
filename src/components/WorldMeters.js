@@ -20,19 +20,19 @@ const updateCountry=e =>{
 }
 
 return (
-<div class="world-meter">
-           <h1 class="main-heading">Corona Update Center</h1>
-           <div class="stat">
-             <div class="stat-group"> 
+<div className="mx-0 px-0 col-lg-9 full">
+           <h1 className="font-weight-bold my-3 text-center">Corona Update Center</h1>
+           <div className="row mx-0">
+             <div className=" mx-auto px-3 py-2 col-lg-5  bg-secondary rounded"> 
                <h2>Global </h2>
-               <h3>Coronavirus Cases</h3>
-               <h2 class="blue">{data.world[0] && data.world[0].cases.active}</h2>
-               <h3>Deaths</h3>
-               <h2 class="red">{data.world[0] && data.world[0 ].deaths.total}</h2>
-               <h3>Recoverd</h3>
-               <h2 class="green">{data.world[0] && data.world[0].cases.recovered}</h2>
+               <h4>Coronavirus Cases</h4>
+               <h2 className="text-primary">{data.world[0] && data.world[0].cases.active}</h2>
+               <h4>Deaths</h4>
+               <h2 className="text-danger">{data.world[0] && data.world[0 ].deaths.total}</h2>
+               <h4>Recoverd</h4>
+               <h2 className="text-success">{data.world[0] && data.world[0].cases.recovered}</h2>
              </div>
-             <div class="stat-group">
+             <div className="mx-auto px-3 py-2 bg-secondary col-lg-5 rounded">
               <p>Select country</p>
                <select className="country" onChange={updateCountry}>
                {data.countries && data.countries.map (
@@ -40,19 +40,17 @@ return (
                 <option value={country}> {country} </option>
                 )}
                 </select>
-                <h3>Coronavirus Cases</h3>
-               <h2 class="blue">{data.country[0] && data.country[0].cases.active}</h2>
-               <h3>Deaths</h3>
-               <h2 class="red">{data.country[0] && data.country[0 ].deaths.total}</h2>
-               <h3>Recoverd</h3>
-               <h2 class="green">{data.country[0] && data.country[0].cases.recovered}</h2>
+                <h4>Coronavirus Cases</h4>
+               <h2 className="text-primary">{data.country[0] && data.country[0].cases.active}</h2>
+               <h4>Deaths</h4>
+               <h2 className="text-danger">{data.country[0] && data.country[0 ].deaths.total}</h2>
+               <h4>Recoverd</h4>
+               <h2 className="text-success">{data.country[0] && data.country[0].cases.recovered}</h2>
                <small>Updated on {data.country[0] &&data.country[0].day}</small>
             </div>
             </div>
-           <div className="province"> Provincial data for Pakistan will be added soon!</div>
-            {/* <Link to ='/map'>
-            <button>Map</button>
-            </Link> */}
+           <div className="text-center text-secondary font-weight-bold py-3"> Provincial data for Pakistan will be added soon!</div>
+            
          </div>  );
 }
 
